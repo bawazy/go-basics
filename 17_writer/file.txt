@@ -1,0 +1,1 @@
+writing some string into the file using write method

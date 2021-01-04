@@ -6,12 +6,15 @@ import (
 	"text/template"
 )
 
+//Person struct
 type Person struct {
 	Name   string
 	Emails []string
 }
 
-const tmpl = `Helloo my name is{{.Name}} and {{range .Emails}} my email is {{.}}
+const tmpl = `{{$name := .Name}} {{range .Emails}} 
+my name is {{$name}} and
+my email is {{.}}
 {{end}}
 `
 
